@@ -1,0 +1,194 @@
+.auth{
+    height: auto;
+    width: 100%;
+}
+.open-button {
+    //background-color: linear-gradient(45deg, #39CCCC, #01FF70) 1;
+    box-sizing: border-box;
+    width: 170px;
+    height: 35px;
+    background-color: transparent;
+    border-image: linear-gradient(45deg, #e6abff, #6dc7ff) 1;
+
+    &:hover {
+        opacity: 1;
+        background: linear-gradient(45deg, rgba(230, 171, 255, 1) 0%, rgba(109, 199, 255, 1) 100%);
+    }
+}
+.header {
+    & .connect{
+        padding-right: 30px;
+    }
+}
+.btn-cancel {
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    position: absolute;
+    right: 15px;
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;
+    border: none;
+}
+/* Всплывающая форма-скрыта по умолчанию */
+.form-popup {
+    position: relative;
+    width: 100%;
+    min-height: 424px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  
+}
+h2 {
+    text-align: center;
+    margin-bottom: 30px !important;
+}
+h3 {
+    margin-bottom: 25px !important;
+    text-align: center;
+    color: #887569;
+}
+p {
+    text-align: justify;
+}
+/* Добавление стилей в контейнер форм */
+.form-container {
+    margin: 0 auto;
+    width: 320px;
+    min-height: 300px;
+    background-color: white;
+    position: relative;
+}
+
+/* Поля ввода полной ширины */
+.form-container input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0 25px 0;
+    border: none;
+    border-radius: 4px;
+    background: rgba(245,243,243,.64);
+}
+
+/* Когда входы получают фокус, сделайте что-нибудь */
+.form-container input[type="text"]:focus {
+    outline: none;
+}
+input#password::placeholder , input#mail::placeholder{
+    color:#baafa9;
+    
+}
+/* Установите стиль для кнопки отправить/кнопка */
+.send-button {
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #dbd7d2;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Добавьте некоторые эффекты наведения на кнопки */
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+.errors-formik {
+    color: tomato;
+    margin-top: -25px;
+    margin-bottom: 15px;
+}
+.registration-link{
+    //text-decoration: none;
+    color: #baafa9;
+}
+.thank-u {
+    display: none;
+    box-sizing: border-box;
+    position: fixed;
+    width: 350px;
+    height: 100px;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    background: #b1a290;
+    border: none;
+    border-radius: 4px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    & p {
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .connect {
+        padding-right: 0 !important;
+    }
+    .open-button {
+        width: 140px;
+        height: 35px;
+        font-size: 14px !important;
+    }
+    .form-popup {
+        margin: 70px auto;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .connect {
+        padding-right: 0 !important;
+    }
+    .open-button {
+        width: 120px;
+        height: 30px;
+        font-size: 12px !important;
+    }
+    .form-popup {
+        position: relative;
+        margin: 70px auto;
+        top: 0;
+        left: 0;
+        // // right: 50%;
+        // -webkit-transform: translate(-50%, -50%);
+        // -ms-transform: translate(-50%, -50%);
+     transform: translate(0%, 0%);
+    }
+    .form-container{
+        width: 400px;
+    }
+    .btn-cancel {
+      right: 15px;
+    }
+}
+@media (min-width: 270px) and (max-width: 575px) {
+   
+    .form-container{
+        width: 250px !important;
+    }
+    .form-popup {
+        margin: 70px auto;
+    }
+    .btn-cancel {
+        right: 15px;
+      }
+    
+}
+@media (max-width: 270px) {
+    .form-container{
+        width: 200px !important;
+    }
+    .form-popup {
+        margin: 70px auto;
+    }
+}

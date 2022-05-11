@@ -1,0 +1,38 @@
+a.no-text-decoration:active, /* активная/посещенная ссылка */
+a.no-text-decoration:hover,
+a.no-text-decoration {
+    color: #887569;
+    text-decoration: none;
+}
+.catalogCard {
+    display: flex;
+    position: relative;
+    padding: 0 8px 16px;
+
+    & img {
+        position: relative;
+        border-radius: 4px;
+        height: 100%;
+        width: 100%;
+    }
+    & .productCard-content {
+        margin-top: 8px;
+        min-height: 52px;
+        padding: 0 2px;
+    }
+    & .productCard-content-row:last-child {
+        display: flex;
+    }
+}
+.product-Card-color {
+    margin-left: 12px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+}
+.product-Card-color + .product-Card-color {
+    margin-left: 6px;
+}

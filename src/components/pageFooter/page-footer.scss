@@ -1,0 +1,209 @@
+.footer {
+    border-top: 1px solid #ebe6e1;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-top: 48px;
+    width: 100%;
+}
+.footer-holder {
+    margin-left: 56px;
+    margin-right: 56px;
+}
+.footer-columns {
+    align-items: start;
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0 77px;
+}
+.footer-columns-mid {
+    display: none;
+}
+.footer-column {
+    flex-basis: 320px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 320px;
+    position: relative;
+    & .item {
+        display: block;
+        white-space: nowrap;
+    }
+    & .item + .item {
+        margin-top: 16px;
+    }
+}
+.section-title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 24px;
+}
+.footer-aplication {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.footer-aplication-icon {
+    margin-bottom: 30px;
+    & img {
+        height: 60px;
+        width: 60px;
+        border-radius: 10px;
+    }
+}
+.footer-subscribe-label {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 24px;
+}
+.subscribe-form {
+    display: flex;
+    & .subscibe-field {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    & .subscibe-button {
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-left: 8px;
+    }
+}
+
+.subscribe {
+    min-width: 300px;
+}
+.text-input-mail {
+    display: flex;
+    height: 44px;
+    & input {
+        outline: none;
+        border: none;
+
+        &::placeholder {
+            color: #baafa9;
+        }
+    }
+    & .input-mail {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        padding: 0 16px;
+        font-size: 16px;
+        outline: none;
+        background-color: rgba(245, 243, 243, 0.64);
+    }
+}
+.button-mail {
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: none;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+    height: 44px;
+    width: 44px !important;
+    border-radius: 4px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color: #dbd7d2;
+    color: #fff;
+
+    & img {
+        height: 15px;
+        width: 15px;
+        fill: #fff;
+        border: none;
+        color: #fff;
+    }
+}
+.subscibe-note {
+    font-size: 12px;
+    line-height: normal;
+    margin-top: 8px;
+    opacity: 0.5;
+}
+.footer-socials {
+    display: flex;
+    margin-top: 32px;
+    & .social a {
+        height: 24px;
+        text-decoration: none;
+        color: #887569;
+    }
+    & .social + .social {
+        margin-left: 24px;
+    }
+}
+.footer-bottom {
+    height: 56px;
+    align-items: center;
+    border-top: 1px solid #ebe6e1;
+}
+@media (max-width: 1280px) {
+    .footer-holder {
+        margin-left: 16px;
+        margin-right: 16px;
+        width: auto;
+    }
+    .footer-columns {
+        display: none;
+    }
+    .footer-columns-mid {
+        align-items: start;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+    .footer-subscribe{
+        padding: 24px 0;
+    }
+    .apllicationLink {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: left;
+        margin-bottom: 24px;
+        position: relative;
+        text-decoration: none;
+    }
+    .applikationLink-icon {
+        & img {
+            height: 60px;
+            width: 144px;
+        }
+    }
+    .subscibe-note-mid {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #baafa9;
+        flex-grow: 1;
+        flex-shrink: 0;
+        align-self: center;
+        align-items: center;
+        margin-left: 32px;
+    }
+    .footer-section-mid{
+        width: 100%;
+    }
+    .footer-column-mid {
+        flex-grow: 1;
+        flex-shrink: 1;
+        max-width: 320px;
+        position: relative;
+    }
+    .footer-socials {
+        display: flex;
+        margin-top: 0;
+        padding: 24px 0;
+    }
+}
+@media (max-width: 414px) {
+    .subscibe-note-mid{
+        margin-left: 10px;
+        font-size: 12px;
+    }
+}
