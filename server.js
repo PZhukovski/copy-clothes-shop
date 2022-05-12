@@ -1,10 +1,10 @@
 // import { create, router as _router, defaults } from 'json-server';
 import pkg from 'json-server';
-import path from 'path'; 
+import pathdata from 'path'; 
 import express from 'express';
 
 const { create,  router: _router,  defaults , rewriter } = pkg;
-
+const { path , dirname: __dirname } = pathdata;
 const server = create();
 const router = _router('users.json');
 const middlewares = defaults({
