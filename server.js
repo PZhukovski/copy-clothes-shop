@@ -1,10 +1,17 @@
 // import { create, router as _router, defaults } from 'json-server';
 import pkg from 'json-server';
-import pathdata from 'path'; 
+import path from 'path'; 
+import { fileURLToPath } from 'url';
+// import { path, dirname as __dirname } from 'path';
 import express from 'express';
 
+
 const { create,  router: _router,  defaults , rewriter } = pkg;
-const { path , dirname: __dirname } = pathdata;
+// const { dirname: __dirname  } = path;
+const dirname = path.dirname;
+const __dirname = dirname(fileURLToPath(import.meta.url));
+// const __dirname = path.dirname;
+ console.log(__dirname);
 const server = create();
 const router = _router('users.json');
 const middlewares = defaults({
@@ -15,9 +22,11 @@ server.use(middlewares);
 server.use(rewriter({
   '/api/*': '/$1',
 }))
-server.use(router);
-// server.use('/db', middlewares, router);
+//  server.use(router);
+server.use('/', middlewares, router);
+// console.log(path);
 server.use(express.static(path.join(__dirname, 'build')));
+
 server.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
