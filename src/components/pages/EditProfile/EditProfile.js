@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import axios from "axios";
+import { JSON_API } from '../../JsonPort';
 import { useCookies } from 'react-cookie';
 import { fetchUser, upDateDataUser, userSelector } from '../profile/ProfileSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -110,7 +111,7 @@ const HandleOrderForm = ({ props, activeModal, setActiveModal }) => {
             return newArr;
         })
         try {
-            const resp = await axios.put(`http://localhost:3001/users/${Id}`, newUserData[0]);
+            const resp = await axios.put(`${JSON_API}/users/${Id}`, newUserData[0]);
             // console.log(resp.data);
         } catch (err) {
             // Handle Error Here 

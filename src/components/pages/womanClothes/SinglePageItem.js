@@ -5,6 +5,7 @@ import { fetchClothesForWoman, clothesSelector } from './renderPage/ShoesSlice';
 import { fetchUser, upDateDataUser, userSelector } from '../../../components/pages/profile/ProfileSlice';
 import { useCookies } from 'react-cookie';
 import axios from 'axios';
+import { JSON_API } from '../../JsonPort';
 import arrowleft from './renderPage/arrow-left.svg';
 import favorite from '../../../assets/header-icons/favorite.svg';
 import favoritePush from '../../../assets/header-icons/favourite-push.svg'
@@ -87,7 +88,7 @@ const SinglePageItem = () => {
             })
             const deleteWishlistUser = async () => {
                 try {
-                    const resp = await axios.put(`http://localhost:3001/users/${Id}`, newUserData[0]);
+                    const resp = await axios.put(`${JSON_API}/users/${Id}`, newUserData[0]);
                     //console.log(resp.data);
                 } catch (err) {
                     // Handle Error Here 
@@ -110,7 +111,7 @@ const SinglePageItem = () => {
             })
             const sendPutUser = async () => {
                 try {
-                    const resp = await axios.put(`http://localhost:3001/users/${Id}`, newUserData[0]);
+                    const resp = await axios.put(`${JSON_API}/users/${Id}`, newUserData[0]);
                     //console.log(resp.data);
                 } catch (err) {
                     // Handle Error Here 
@@ -140,7 +141,7 @@ const SinglePageItem = () => {
             })
             const sendPutUser = async () => {
                 try {
-                    const resp = await axios.put(`http://localhost:3001/users/${Id}`, newUserData[0]);
+                    const resp = await axios.put(`${JSON_API}/users/${Id}`, newUserData[0]);
                     //console.log(resp.data);
                 } catch (err) {
                     // Handle Error Here 

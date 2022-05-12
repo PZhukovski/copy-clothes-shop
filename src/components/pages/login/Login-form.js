@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import './login-form.scss';
 import axios from 'axios';
+import { JSON_API } from '../../JsonPort';
 import { useCookies } from 'react-cookie';
 import React from 'react';
 import { Formik } from 'formik';
@@ -40,7 +41,7 @@ const HandleLoginForm = () => {
 
     const registerHandler = async (values, { setSubmitting, resetForm }) => {
         
-        const request = await axios.get('http://localhost:3001/users')
+        const request = await axios.get(`${JSON_API}/users`)
         const personsArr = request.data.map(_transformPerson);
         const isLogin = personsArr.filter(person => person.mail === values.mail && person.password === values.password);
         // console.log(isLogin);

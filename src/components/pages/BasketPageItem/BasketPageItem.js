@@ -4,6 +4,7 @@ import { useDispatch, useSelector, useStore } from 'react-redux';
 import { useCookies } from 'react-cookie';
 import { userSelector, fetchUser, upDateDataUser, } from '../profile/ProfileSlice';
 import { fetchClothesForWoman, clothesSelector } from '../womanClothes/renderPage/ShoesSlice'
+import { JSON_API } from '../../JsonPort';
 import axios from 'axios';
 import basket_delete from '../../../assets/basket/basket_delete.svg';
 import arrowup from '../../../assets/store/up.svg';
@@ -54,7 +55,7 @@ const BasketPageItem = ({ id, modelId, article, price, name, color, pallete, siz
         })
         const deleteWishlistUser = async () => {
             try {
-                const resp = await axios.put(`http://localhost:3001/users/${Id}`, newUserData[0]);
+                const resp = await axios.put(`${JSON_API}/users/${Id}`, newUserData[0]);
                 //console.log(resp.data);
             } catch (err) {
                 // Handle Error Here 
@@ -96,7 +97,7 @@ const BasketPageItem = ({ id, modelId, article, price, name, color, pallete, siz
         //console.log(newUserData);
         const changeBasketPriceUser = async () => {
             try {
-                const resp = await axios.put(`http://localhost:3001/users/${Id}`, newUserData[0]);
+                const resp = await axios.put(`${JSON_API}/users/${Id}`, newUserData[0]);
                 //console.log(resp.data);
             } catch (err) {
                 // Handle Error Here 
@@ -132,7 +133,7 @@ const BasketPageItem = ({ id, modelId, article, price, name, color, pallete, siz
 
         const changeBasketPriceUser = async () => {
             try {
-                const resp = await axios.put(`http://localhost:3001/users/${Id}`, newUserData[0]);
+                const resp = await axios.put(`${JSON_API}/users/${Id}`, newUserData[0]);
                 //console.log(resp.data);
             } catch (err) {
                 // Handle Error Here 

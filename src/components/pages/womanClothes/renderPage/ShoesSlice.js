@@ -1,11 +1,11 @@
 import { createSlice, createAsyncThunk, createEntityAdapter , createSelector} from "@reduxjs/toolkit";
 import axios from 'axios';
-
+import { JSON_API } from '../../../JsonPort';
 
 export const fetchClothesForWoman = createAsyncThunk(
     'womancollection/fetchClothesForWoman',
     async () => {
-        const response = await axios.get('http://localhost:3001/womancollection');
+        const response = await axios.get(`${JSON_API}/womancollection`);
         //  console.log(response.data);
         return response.data;  
     }  

@@ -5,7 +5,7 @@ import { useCookies } from 'react-cookie';
 import { userSelector, fetchUser, upDateDataUser, } from '../profile/ProfileSlice';
 import { fetchClothesForWoman, clothesSelector } from '../womanClothes/renderPage/ShoesSlice'
 import axios from 'axios';
-
+import { JSON_API } from '../../JsonPort';
 import cancel from '../EditProfile/cancel.svg';
 import './wishlist.scss';
 
@@ -48,7 +48,7 @@ const WishListPage = () => {
         })
         const deleteWishlistUser = async () => {
             try {
-                const resp = await axios.put(`http://localhost:3001/users/${Id}`, newUserData[0]);
+                const resp = await axios.put(`${JSON_API}/users/${Id}`, newUserData[0]);
                 //console.log(resp.data);
             } catch (err) {
                 // Handle Error Here 
@@ -72,7 +72,7 @@ const WishListPage = () => {
             })
             const sendPutUser = async () => {
                 try {
-                    const resp = await axios.put(`http://localhost:3001/users/${Id}`, newUserData[0]);
+                    const resp = await axios.put(`${JSON_API}/users/${Id}`, newUserData[0]);
                     //console.log(resp.data);
                 } catch (err) {
                     // Handle Error Here 

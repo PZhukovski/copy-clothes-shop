@@ -6,7 +6,7 @@ import { useCookies } from 'react-cookie';
 import './send-form.scss';
 
 import axios from 'axios';
-
+import { JSON_API } from '../../../JsonPort';
 import React from 'react';
 import { useFormik, Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
@@ -47,7 +47,7 @@ const SignupForm = () => {
 
     const registerHandler = async (values, { setSubmitting, resetForm }) => {
         
-        const request = await axios.get('http://localhost:3001/users')
+        const request = await axios.get(`${JSON_API}/users`);
         const personsArr = request.data.map(_transformPerson);
         //console.log(personsArr.map(person => person.mail !== values.mail)); 
         const isOccupiedMail = personsArr.filter(person => person.mail === values.mail);
@@ -69,7 +69,7 @@ const SignupForm = () => {
         }
         if (isOccupiedMail.length === 0) {
             try {
-                const response = await axios.post("http://localhost:3001/users", newContact)
+                const response = await axios.post(`${JSON_API}/users`, newContact)
                 console.log(dispatch(addUser(newContact)))
                 setCookie('Mail', values.mail, { path: '/' });
                 setCookie('Password', values.password, { path: '/' });

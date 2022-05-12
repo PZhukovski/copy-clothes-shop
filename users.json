@@ -88,72 +88,35 @@
           "composition": "Натуральная замша Подкладка: Натуральная кожа Подошва: Резина 100% Стелька: Натуральная кожа"
         }
       ],
-      "phone": "",
-      "data_birth": "16.05.1994",
-      "size_of_clothes": "S",
-      "size_of_shoes": "38",
       "basket": [
         {
           "category": "Обувь",
           "path": "obuv",
-          "id": "113460",
-          "modelId": 3,
-          "article": "113460",
-          "price": 11980,
-          "name": "Кеды классические",
-          "color": "Черный",
-          "pallete": "#000000",
-          "size": [
-            {
-              "scale": "37",
-              "quantity": "1"
-            },
-            {
-              "scale": "38",
-              "quantity": null
-            },
-            {
-              "scale": "39",
-              "quantity": "1"
-            }
-          ],
-          "img": [
-            "/img-clothes/women/shoes/model3.black/1.jpg",
-            "/img-clothes/women/shoes/model3.black/2.jpg",
-            "/img-clothes/women/shoes/model3.black/3.jpg"
-          ],
-          "description": "Кеды из плотной кожи. Полностью монохромные, готовые к непогоде, кеды: без перфорации, на мягкой кожаной стельке, с гибкой подошвой из немаркой резины. - Прочная натуральная кожа, на которой малозаметны царапины - Стелька с ортопедическим эффектом для правильной поддержки стопы - Подкладка из эластичной кожи шевро. Сделано в Китае.",
-          "proportions": "Высота подошвы: 1,5-3 см Полный размер",
-          "composition": "Натуральная кожа Подкладка: Натуральная кожа Подошва: Резина 100% Стелька: Натуральная кожа"
-        },
-        {
-          "category": "Обувь",
-          "path": "obuv",
-          "id": "113458",
+          "id": "113459",
           "modelId": 2,
-          "article": "113458",
+          "article": "113459",
           "price": 14980,
           "name": "Ботинки с объемным швом",
-          "color": "Бежевый",
-          "pallete": "rgb(228, 184, 140)",
+          "color": "Молочный",
+          "pallete": "rgb(235, 228, 228)",
           "size": [
             {
               "scale": "37",
-              "quantity": "7"
+              "quantity": null
             },
             {
               "scale": "38",
-              "quantity": null
+              "quantity": "4"
             },
             {
               "scale": "39",
-              "quantity": null
+              "quantity": "1"
             }
           ],
           "img": [
-            "/img-clothes/women/shoes/model2.beige/1.jpg",
-            "/img-clothes/women/shoes/model2.beige/2.jpg",
-            "/img-clothes/women/shoes/model2.beige/3.jpg"
+            "/img-clothes/women/shoes/model2.milk/1.jpg",
+            "/img-clothes/women/shoes/model2.milk/2.jpg",
+            "/img-clothes/women/shoes/model2.milk/3.jpg"
           ],
           "description": "Ботинки из натуральной кожи. Универсальная модель в стиле дерби. Для ботинок выбрали нежную телячью кожу с уникальным природным рисунком. Гибкая подошва из резины не скользит и долго служит, а подкладка из кожи шевро обеспечивает комфорт. Деликатный материал требует бережного обращения. Обязательно обработайте обувь влагоотталкивающим средством после покупки.Сделано Китае.",
           "proportions": null,
@@ -193,6 +156,10 @@
           "composition": "Натуральная замша Подкладка: Натуральная кожа Подошва: Резина 100% Стелька: Натуральная кожа"
         }
       ],
+      "phone": "",
+      "data_birth": "16.05.1994",
+      "size_of_clothes": "S",
+      "size_of_shoes": "38",
       "id": "164f6f53-d2db-4708-91b7-9505b580c3a2",
       "mail": "16polina@mail.ru",
       "password": "Hello12!",
