@@ -1,33 +1,33 @@
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import SendForm from '../pages/registration/sendForm/SendForm';
-import LoginForm from '../pages/login/Login-form';
-import Profile from '../pages/profile/Profile';
-import EditProfile from '../pages/EditProfile/EditProfile';
-import MainPage from '../pages/MainPage/MainPage';
-import SearchPage from '../pages/SearchPage/SearchPage';
-import ShoesListPage from '../pages/womanClothes/shoesPage/ShoesListPage';
-import RenderListPage from '../pages/womanClothes/shoesPage/RenderListPage';
-import SinglePageItem from '../pages/womanClothes/SinglePageItem';
-import WishListPage from '../pages/WishListPage/WishListPage';
-import BasketPage from '../pages/BasketPage/BasketPage';
-import PageFooter from '../pageFooter/PageFooter';
+// import { CSSTransition, TransitionGroup } from 'react-transition-group';
+// import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+// import SendForm from '../pages/registration/sendForm/SendForm';
+// import LoginForm from '../pages/login/Login-form';
+// import Profile from '../pages/profile/Profile';
+// import EditProfile from '../pages/EditProfile/EditProfile';
+// import MainPage from '../pages/MainPage/MainPage';
+// import SearchPage from '../pages/SearchPage/SearchPage';
+// import ShoesListPage from '../pages/womanClothes/shoesPage/ShoesListPage';
+// import RenderListPage from '../pages/womanClothes/shoesPage/RenderListPage';
+// import SinglePageItem from '../pages/womanClothes/SinglePageItem';
+// import WishListPage from '../pages/WishListPage/WishListPage';
+// import BasketPage from '../pages/BasketPage/BasketPage';
+// import PageFooter from '../pageFooter/PageFooter';
 
-import React, { Component } from 'react'
-class AppRoute extends Component {
-static propTypes = {
-  children: PropTypes.node
-}
-render() {
-  const { children } = this.props
-  return (
-    <div>
-      {children}
-    </div>
-  )
-}
-}
-export default AppRoute;
+// import React, { Component } from 'react'
+// class AppRoute extends Component {
+// static propTypes = {
+//   children: PropTypes.node
+// }
+// render() {
+//   const { children } = this.props
+//   return (
+//     <div>
+//       {children}
+//     </div>
+//   )
+// }
+// }
+// export default AppRoute;
 // const AnimatedRoutes = () => {
 //     const location = useLocation();
 //     console.log(location);

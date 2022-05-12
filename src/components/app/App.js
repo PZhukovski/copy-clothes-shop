@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes, location as useLocation } from 
 import ScrollToTop from './ScrollToTop.js';
 import PageHeader from '../pageHeader/Page-Header.js';
 import Spinner from '../spinner/Spinner';
-import AppRoute from './AnimatedRoutes.js';
 import './app.scss';
 import SendForm from '../pages/registration/sendForm/SendForm.js';
 import LoginForm from '../pages/login/Login-form.js';
