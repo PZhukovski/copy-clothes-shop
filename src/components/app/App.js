@@ -91,7 +91,7 @@ const App = () => {
 }
 
 export default App;
-
+//  "start": "concurrently \"react-scripts start\" \"node --experimental-modules server.js\"",
 // const routes = [
 //     { path: "/", Element: <MainPage /> },
 //     { path: "/catalog/womancollection/new", Element: <CommonListPage /> },
