@@ -1,5 +1,7 @@
 // import { create, router as _router, defaults } from 'json-server';
 import pkg from 'json-server';
+import path from 'path'; 
+import express from 'express';
 
 const { create,  router: _router,  defaults , rewriter } = pkg;
 
@@ -14,6 +16,11 @@ server.use(rewriter({
   '/api/*': '/$1',
 }))
 server.use(router);
+// server.use('/db', middlewares, router);
+server.use(express.static(path.join(__dirname, 'build')));
+server.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 server.listen(PORT, () => {
   console.log('Server is running');
 });

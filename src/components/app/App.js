@@ -1,9 +1,10 @@
 import { lazy, Suspense } from 'react';
+
 import { BrowserRouter as Router, Route, Routes, location as useLocation } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop.js';
 import PageHeader from '../pageHeader/Page-Header.js';
 import Spinner from '../spinner/Spinner';
-
+import AppRoute from './AnimatedRoutes.js';
 import './app.scss';
 import SendForm from '../pages/registration/sendForm/SendForm.js';
 import LoginForm from '../pages/login/Login-form.js';
@@ -17,19 +18,6 @@ import SinglePageItem from '../pages/womanClothes/SinglePageItem.js';
 import WishListPage from '../pages/WishListPage/WishListPage.js';
 import BasketPage from '../pages/BasketPage/BasketPage.js';
 import PageFooter from '../pageFooter/PageFooter.js';
-
-// const SendForm = lazy(() => import('../pages/registration/sendForm/SendForm'));
-// const LoginForm = lazy(() => import('../pages/login/Login-form'));
-// const Profile = lazy(() => import('../pages/profile/Profile'));
-// const EditProfile = lazy(() => import('../pages/EditProfile/EditProfile'));
-// const MainPage = lazy(() => import('../pages/MainPage/MainPage'));
-// const SearchPage = lazy(() => import('../pages/SearchPage/SearchPage'));
-
-// const CommonListPage = lazy(() => import('../pages/womanClothes/renderPage/CommonListPage'));
-// const RenderListPage = lazy(() => import('../pages/womanClothes/renderPage/RenderListPage'));
-// const SinglePageItem = lazy(() => import('../pages/womanClothes/SinglePageItem'));
-// const WishListPage = lazy(() => import('../pages/WishListPage/WishListPage'));
-// const BasketPage = lazy(() => import('../pages/BasketPage/BasketPage'));
 
 
 const App = () => {
