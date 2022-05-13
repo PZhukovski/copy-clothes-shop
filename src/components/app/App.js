@@ -68,6 +68,7 @@ const App = () => {
                             <Route path="/catalog/womancollection/jeans/:id" element={<SinglePageItem />} />
                             <Route path="/catalog/womancollection/bodybasics" element={<RenderListPage dataType='trikotaz' />} />
                             <Route path="/catalog/womancollection/bodybasics/:id" element={<SinglePageItem />} />
+                            
                         </Routes>
                     {/* </Suspense> */}
                     {window.location.pathname !== "/basket" && <PageFooter />}
