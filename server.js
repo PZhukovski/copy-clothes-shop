@@ -22,11 +22,11 @@ server.use(middlewares);
 server.use(rewriter({
   '/api/*': '/$1',
 }))
-// server.use(router);
+ server.use(router);
 const app = express();
-server.use('/', middlewares, router);
-server.use('/catalog/womancollection', middlewares, router);
-server.use('/wishlist', middlewares, router);
+// server.use('/', middlewares, router);
+// server.use('/catalog/womancollection', middlewares, router);
+// server.use('/wishlist', middlewares, router);
 // console.log(path);
 server.use(express.static(__dirname));
 server.use(express.static(path.join(__dirname, 'build')));
