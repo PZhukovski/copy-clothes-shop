@@ -24,11 +24,12 @@ server.use(router);
 // server.use('/', middlewares, router);
 
 // server.use(express.static(__dirname));
-// server.use(express.static(path.join(__dirname, 'build')));
+server.use(express.static(path.join(__dirname, 'build')));
 
-// server.get('/*', function (req, res) {
-//     res.sendFile(path.join(__dirname, 'build' , 'index.html'));
-// });
+server.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build' , 'index.html'));
+});
+console.log(__dirname);
 
 server.listen(PORT, () => {
   console.log('Server is running');
