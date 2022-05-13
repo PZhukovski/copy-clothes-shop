@@ -23,12 +23,13 @@ server.use(rewriter({
   '/api/*': '/$1',
 }))
 server.use(router);
+const app = express();
 // server.use('/', middlewares, router);
 // console.log(path);
-server.use(express.static(__dirname));
-server.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'build')));
 
-server.get('*', function (req, res) {
+app.get('/*', function (req, res) {
     // res.sendFile(path.join(__dirname, 'build', 'index.html'));
     res.sendFile(path.join(__dirname, 'build' , 'index.html'));
 });
