@@ -24,7 +24,7 @@ server.use(rewriter({
 }))
 // server.use(router);
 const app = express();
-server.use('/catalog/womancollection', middlewares, router);
+server.use('/*', middlewares, router);
 // console.log(path);
 server.use(express.static(__dirname));
 server.use(express.static(path.join(__dirname, 'build')));
