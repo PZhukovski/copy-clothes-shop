@@ -16,9 +16,9 @@ const middlewares = defaults({
 });
 const PORT = process.env.PORT || 3001;
 server.use(middlewares);
-// server.use(rewriter({
-//   '/api/*': '/$1',
-// }))
+server.use(rewriter({
+  '/api/*': '/$1',
+}))
 server.use(router);
 
 // server.use('/', middlewares, router);
