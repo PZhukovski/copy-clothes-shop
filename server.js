@@ -22,14 +22,22 @@ server.use(middlewares);
 server.use(rewriter({
   '/api/*': '/$1',
 }))
-server.use(router);
+// server.use(router);
 const app = express();
-// server.use('/', middlewares, router);
+server.use('/catalog/womancollection', middlewares, router);
 // console.log(path);
-app.use(express.static(__dirname));
-app.use(express.static(path.join(__dirname, 'build')));
+server.use(express.static(__dirname));
+server.use(express.static(path.join(__dirname, 'build')));
 
-app.get('/*', function (req, res) {
+server.get('/*', function (req, res) {
+    // res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'build' , 'index.html'));
+});
+server.get('/catalog/womancollection', function (req, res) {
+    // res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'build' , 'index.html'));
+});
+server.get('/wishlist', function (req, res) {
     // res.sendFile(path.join(__dirname, 'build', 'index.html'));
     res.sendFile(path.join(__dirname, 'build' , 'index.html'));
 });
