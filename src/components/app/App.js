@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 
-import { BrowserRouter as Router, Route, Routes, location as useLocation } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, location as useLocation } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop.js';
 import PageHeader from '../pageHeader/Page-Header.js';
 import Spinner from '../spinner/Spinner';
@@ -28,7 +28,7 @@ const App = () => {
                     <PageHeader />
                     {/* <Suspense fallback={<Spinner />}> */}
                         <Routes >
-                            <Route path="/" element={<MainPage />}></Route>
+                            <Route exact path="/" element={<MainPage />}></Route>
                             <Route path="/catalog/womancollection/new" element={<CommonListPage />}></Route>
                             <Route path="/catalog/mencollection" element={<CommonListPage />}></Route>
                             <Route path="/magazine" element={<CommonListPage />}></Route>
