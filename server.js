@@ -7,8 +7,9 @@ import express from 'express';
 
 
 const { create,  router: _router,  defaults , rewriter } = pkg;
-const dirname = path.dirname;
-const __dirname = dirname(fileURLToPath(import.meta.url));
+// const dirname = path.dirname;
+// const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = path.resolve();
 const server = create();
 const router = _router('users.json');
 const middlewares = defaults({
@@ -20,13 +21,13 @@ server.use(rewriter({
   '/api/*': '/$1',
 }))
 server.use(router);
-
+console.log(__dirname);
 // server.use('/', middlewares, router);
 
 // server.use(express.static(__dirname));
 server.use(express.static(path.join(__dirname, 'build')));
 
-server.get('*', function (req, res) {
+server.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build' , 'index.html'));
 });
 console.log(__dirname);
