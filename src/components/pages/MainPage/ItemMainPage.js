@@ -1,8 +1,6 @@
-// import {  userSelector, clothesSelector } from '../shoesPage/ShoesSlice';
-// import { useDispatch, useSelector } from 'react-redux';
-import { Link, Route, Routes, useLocation , useParams} from 'react-router-dom';
-// import './shoesitem.scss';
-// import SinglePageItem from '../SinglePageItem';
+
+import { Link, useLocation } from 'react-router-dom';
+
 
 const ItemMainPage = ({ id, modelId, article, price, name, path, color, pallete, size, img, description, proportions, composition }) => {
 

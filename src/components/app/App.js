@@ -79,47 +79,8 @@ const App = () => {
 }
 
 export default App;
-//  "start": "concurrently \"react-scripts start\" \"node --experimental-modules server.js\"",
-// const routes = [
-//     { path: "/", Element: <MainPage /> },
-//     { path: "/catalog/womancollection/new", Element: <CommonListPage /> },
-//     { path: "/catalog/mencollection", Element: <CommonListPage /> },
-//     { path: "/magazine", Element: <CommonListPage /> },
-//     { path: "/buyers", Element: <CommonListPage /> },
-//     { path: "/main", Element: <CommonListPage /> },
-//     { path: "/registration", Element: <SendForm /> },
-//     { path: "/login", Element: <LoginForm /> },
-//     { path: "/profile", Element: <Profile /> },
-//     { path: "/profile/edit", Element: <EditProfile /> },
-//     { path: "/wishlist", Element: <WishListPage /> },
-//     { path: "/basket", Element: <BasketPage /> },
-//     { path: "/catalog", Element: <CommonListPage /> },
-//     { path: "/catalog/search", Element: <SearchPage /> },
-//     { path: "/catalog/womancollection", Element: <CommonListPage /> },
-//     { path: "/catalog/womancollection/:id", Element: <SinglePageItem /> },
-//     { path: "/catalog/womancollection/verhnaa-odezda", Element: <RenderListPage dataType='verhnaa-odezda' /> },
-//     { path: "/catalog/womancollection/verhnaa-odezda/:id", Element: <SinglePageItem /> },
-//     { path: "/catalog/womancollection/jackets", Element: <RenderListPage dataType='verhnaa-odezda' /> },
-//     { path: "/catalog/womancollection/jackets/:id", Element: <SinglePageItem /> },
-//     { path: "/catalog/womancollection/downjacket2", Element: <RenderListPage dataType='verhnaa-odezda' /> },
-//     { path: "/catalog/womancollection/downjacket2/:id", Element: <SinglePageItem /> },
-//     { path: "/catalog/womancollection/trikotaz", Element: <RenderListPage dataType='trikotaz' /> },
-//     { path: "/catalog/womancollection/trikotaz/:id", Element: <SinglePageItem /> },
-//     { path: "/catalog/womancollection/coats", Element: <RenderListPage dataType='verhnaa-odezda' /> },
-//     { path: "/catalog/womancollection/coats/:id", Element: <SinglePageItem /> },
-//     { path: "/catalog/womancollection/obuv", Element: <RenderListPage dataType='obuv' /> },
-//     { path: "/catalog/womancollection/obuv/:id", Element: <SinglePageItem /> },
-//     { path: "/catalog/womancollection/zakety", Element: <RenderListPage dataType='verhnaa-odezda' /> },
-//     { path: "/catalog/womancollection/zakety/:id", Element: <SinglePageItem /> },
-//     { path: "/catalog/womancollection/t-shirts", Element: <RenderListPage dataType='trikotaz' /> },
-//     { path: "/catalog/womancollection/t-shirts/:id", Element: <SinglePageItem /> },
-//     { path: "/catalog/womancollection/ubki", Element: <RenderListPage dataType='jeans' /> },
-//     { path: "/catalog/womancollection/ubki/:id", Element: <SinglePageItem /> },
-//     { path: "/catalog/womancollection/dress", Element: <RenderListPage dataType='trikotaz' /> },
-//     { path: "/catalog/womancollection/dress/:id", Element: <SinglePageItem /> },
-//     { path: "/catalog/womancollection/jeans", Element: <RenderListPage dataType='jeans' /> },
-//     { path: "/catalog/womancollection/jeans/:id", Element: <SinglePageItem /> },
-//     { path: "/catalog/womancollection/bodybasics", Element: <RenderListPage dataType='trikotaz' /> },
-//     { path: "/catalog/womancollection/bodybasics/:id", Element: <SinglePageItem /> },
 
-// ]
+
+
+
+//  "start": "concurrently \"react-scripts start\" \"node --experimental-modules server.js\"",

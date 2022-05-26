@@ -13,9 +13,7 @@ import coat2 from '../../../assets/mainpage/coat2.jpg'
 import shoes1 from '../../../assets/mainpage/shoes1.jpg'
 import shoes2 from '../../../assets/mainpage/shoes2.jpg'
 
-import path from 'path'; 
-import { URL } from 'url';
-// import  {fileURLToPath}  from 'url';
+
 
 const img = [
     <div className="two-img">
@@ -87,18 +85,7 @@ const Slider = () => {
 
 }
 const MainPage = () => {
-    // console.log(path.dirname);
-    // const dirname = path.dirname;
-//    const __dirname = dirname(fileURLToPath(import.meta.url));
-// const __filename = new URL('', import.meta.url).pathname;
-// // Will contain trailing slash
-// const __dirname = new URL('.', import.meta.url).pathname;
-// const __dirname = path.resolve();
-// console.log(path);
-// // const __filename = fileURLToPath(import.meta.url);
-// // console.log(__filename);
-// // const __dirname = path.dirname(__filename);
-//  console.log(__dirname);
+
 
     const dispatch = useDispatch();
     const fetchedClothesForWomen = useSelector(clothesSelector.selectAll);

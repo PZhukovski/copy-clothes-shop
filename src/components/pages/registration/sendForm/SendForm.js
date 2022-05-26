@@ -39,7 +39,7 @@ const _transformPerson = (person) => {
 const SignupForm = () => {
 
     const passwordRegExp = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
-    // const [person, setPerson] = useState('');
+   
     const [cookies, setCookie] = useCookies(['user']);
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -49,7 +49,6 @@ const SignupForm = () => {
         
         const request = await axios.get(`${JSON_API}/users`);
         const personsArr = request.data.map(_transformPerson);
-        //console.log(personsArr.map(person => person.mail !== values.mail)); 
         const isOccupiedMail = personsArr.filter(person => person.mail === values.mail);
         const isFreeMail = personsArr.filter(person => person.mail !== values.mail);
         const userId = v4();
@@ -102,7 +101,6 @@ const SignupForm = () => {
         setTimeout(() => {
              navigate(0);
         }, 6000);
-        // navigate(0);
     };
 
     return (

@@ -14,20 +14,7 @@
 // import PageFooter from '../pageFooter/PageFooter';
 
 // import React, { Component } from 'react'
-// class AppRoute extends Component {
-// static propTypes = {
-//   children: PropTypes.node
-// }
-// render() {
-//   const { children } = this.props
-//   return (
-//     <div>
-//       {children}
-//     </div>
-//   )
-// }
-// }
-// export default AppRoute;
+
 // const AnimatedRoutes = () => {
 //     const location = useLocation();
 //     console.log(location);

@@ -44,7 +44,6 @@ const HandleLoginForm = () => {
         const request = await axios.get(`${JSON_API}/users`)
         const personsArr = request.data.map(_transformPerson);
         const isLogin = personsArr.filter(person => person.mail === values.mail && person.password === values.password);
-        // console.log(isLogin);
         if (isLogin.length === 0) {
             document.querySelector(".open-modal-failed").style.display = "block";
             setTimeout(() => {

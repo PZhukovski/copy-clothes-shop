@@ -34,7 +34,6 @@ const items = [
 const Profile = () => {
     const [cookies, setCookie, removeCookie] = useCookies(['user']);
     const { Mail, Password, Id } = cookies;
-    // const [newUser, setNewUser] = useState(true);
     const navigate = useNavigate();
     const dispatch = useDispatch();
 

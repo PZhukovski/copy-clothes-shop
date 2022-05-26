@@ -10,7 +10,7 @@ import basket_delete from '../../../assets/basket/basket_delete.svg';
 import arrowup from '../../../assets/store/up.svg';
 import arrowdown from '../../../assets/store/down.svg';
 import burger from './menu_burger.svg';
-//import './basket.scss';
+
 
 
 const BasketPageItem = ({ id, modelId, article, price, name, color, pallete, size, img, description, proportions, composition }) => {

@@ -26,10 +26,6 @@ const womanCollectionSlice = createSlice({
     initialState,
     reducers: {
        
-        // addUser: (state, action) => {   
-        //     shoesforwomanAdapter.addOne(state, action.payload);
-        // },
-        
     },
     extraReducers: (builder) => {
         builder
@@ -51,36 +47,6 @@ export default reducer;
 export const clothesSelector = womanCollectionAdapter.getSelectors(state => state.womancollection);
 
 
-// export const userSelector = () =>{
-   
-//     return selectAll;
-// }
-// console.log(store.getState());
-// export const userSelector = createSelector(
-//     (state) => state.filters.activeFilter,
-//     selectAll,
-//     //(state) => state.heroes.heroes,
-//     (filter, heroes) => {
-//         if (filter === 'all'){
-//             return heroes;
-//         } else {
-//             return heroes.filter(item => item.element === filter)
-//         }
-//     }
-// );
-
-// export const filteredHeroesSelector = createSelector(
-//     (state) => state.filters.activeFilter,
-//     selectAll,
-//     //(state) => state.heroes.heroes,
-//     (filter, heroes) => {
-//         if (filter === 'all'){
-//             return heroes;
-//         } else {
-//             return heroes.filter(item => item.element === filter)
-//         }
-//     }
-// );
 export const { 
     userFetching,
     userFetched,

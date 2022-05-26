@@ -14,7 +14,6 @@ import cancel from './cancel.svg';
 const EditProfile = () => {
     const [cookies, setCookie] = useCookies(['user']);
     const { Mail, Password, Id } = cookies;
-    // const [newUser, setNewUser] = useState(true);
     const [activeModal, setActiveModal] = useState(false);
     const dispatch = useDispatch();
 
@@ -84,9 +83,7 @@ const HandleOrderForm = ({ props, activeModal, setActiveModal }) => {
     const [cookies, setCookie] = useCookies(['']);
     const { Mail, Password, Id } = cookies;
     const dispatch = useDispatch();
-    // const [activeFilter, setActiveFilter] = useState("не указан");
-    // const [isActive, setIsActive] = useState(false);
-    // const [selectFilter, setSelectFilter] = useState(null);
+  
 
     useEffect(() => {
         dispatch(fetchUser(Id));

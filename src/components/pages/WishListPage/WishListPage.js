@@ -131,60 +131,30 @@ const WishListPage = () => {
                                                         {renderPrice} P
                                                     </div>
                                                 </div>
-                                                
-                                                {/* <div className='buttons-row d-flex'>
-                                                    <div className="productCard-content-row">
-                                                        <button className="button-to-basket"
-                                                            onClick={() => handleBasket(id)}
-                                                        >
-                                                            В корзину
-                                                        </button>
-                                                    </div>
-                                                    <div className="productCard-content-row">
-                                                        <button className="button-wishlist"
-                                                            onClick={() => handledeleteWishlistUser(id)}
-                                                        >
-                                                            Удалить из избранного
-                                                        </button>
-                                                    </div>
-                                                </div> */}
                                             </div>
                                         </div>
-                                        </Link>
-                                        <div className='buttons-row d-flex'>
-                                                    <div className="productCard-content-row">
-                                                        <button className="button-to-basket"
-                                                            onClick={() => handleBasket(id)}
-                                                        >
-                                                            В корзину
-                                                        </button>
-                                                    </div>
-                                                    <div className="productCard-content-row">
-                                                        <button className="button-wishlist"
-                                                            onClick={() => handledeleteWishlistUser(id)}
-                                                        >
-                                                            Удалить из избранного
-                                                        </button>
-                                                    </div>
-                                                </div>
+                                    </Link>
+                                    <div className='buttons-row d-flex'>
+                                        <div className="productCard-content-row">
+                                            <button className="button-to-basket"
+                                                onClick={() => handleBasket(id)}
+                                            >
+                                                В корзину
+                                            </button>
+                                        </div>
+                                        <div className="productCard-content-row">
+                                            <button className="button-wishlist"
+                                                onClick={() => handledeleteWishlistUser(id)}
+                                            >
+                                                Удалить из избранного
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                         )
                     })
-
-
-                    // return (
-                    //     <div className="catalogPage" key={id}>
-                    //         <h2 className='wishlist-title'>Вишлист</h2>
-                    //         <div className="catalogList" >
-                    // {renderWishList}
-                    //         </div>
-                    //         <OccupiedBasketFail/>
-                    //     </div>
-
-                    // )
-
 
                 })}
             </div>
@@ -193,16 +163,6 @@ const WishListPage = () => {
 
     )
 
-    //    return (
-    //     <div className="catalogPage" >
-    //         <h2 className='wishlist-title'>Вишлист</h2>
-    //         <div className="catalogList" >
-    //             {wishListUser}
-    //         </div>
-    //         <OccupiedBasketFail/>
-    //     </div>
-
-    // )
 }
 
 export default WishListPage;
