@@ -1,8 +1,7 @@
-import { fetchClothesForWoman, clothesSelector, userSelector } from '../womanClothes/renderPage/ShoesSlice';
+import { fetchClothesForWoman, allClothes } from '../womanClothes/renderPage/ClothesSlice';
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import ShoesItem from '../womanClothes/renderPage/ListItem';
 import ItemMainPage from './ItemMainPage';
 import './mainpage.scss';
 import arrowright from './right_arrow.svg';
@@ -86,9 +85,8 @@ const Slider = () => {
 }
 const MainPage = () => {
 
-
     const dispatch = useDispatch();
-    const fetchedClothesForWomen = useSelector(clothesSelector.selectAll);
+    const fetchedClothesForWomen = useSelector(allClothes);
    
     useEffect(() => {
         dispatch(fetchClothesForWoman());

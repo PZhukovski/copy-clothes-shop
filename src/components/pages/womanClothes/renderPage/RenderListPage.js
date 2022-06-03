@@ -3,11 +3,12 @@ import './commonlistpage.scss';
 import arrowup from '../../../../assets/store/up.svg';
 import arrowdown from '../../../../assets/store/down.svg';
 import arrowleft from './arrow-left.svg';
-import { fetchClothesForWoman, clothesSelector } from './ShoesSlice';
+import { fetchClothesForWoman, clothesSelector } from './ClothesSlice';
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import ListItem from './ListItem';
 import history from "history/browser";
+import store from '../../../../store/index';
 
 const FilterForPage = ({ activeFilter, setActiveFilter, dataType }) => {
 
@@ -98,8 +99,9 @@ const FilterForPage = ({ activeFilter, setActiveFilter, dataType }) => {
 
 const RenderListPage = ({ dataType }) => {
 
-
     const [activeFilter, setActiveFilter] = useState('All');
+    const stored = store.getState();
+    //console.log(stored);
     let location = useLocation();
     let historyLocation = history.location;
     const dispatch = useDispatch();
@@ -123,7 +125,6 @@ const RenderListPage = ({ dataType }) => {
         });
 
     const renderClothes = () => {
-
         switch (dataType) {
             case 'verhnaa-odezda':
                 const verhOdezda = fetchedShoesForWomen.filter(item => item.path === "verhnaa-odezda");
@@ -330,3 +331,80 @@ const hrefs = [
 
 
 
+
+
+    // const renderClothes = () => {
+
+    //     switch (dataType) {
+    //         case 'verhnaa-odezda':
+    //             const verhOdezda = fetchedShoesForWomen.filter(item => item.path === "verhnaa-odezda");
+
+    //             return (
+    //                 <>
+    //                     {verhOdezda.map((element) => {
+    //                          return (
+    //                                 <div
+    //                                     key={element.id}
+    //                                     className='provaider-catalogList'>
+    //                                     <ListItem {...element} key={element.id} />
+    //                                 </div>
+    //                          )}
+    //                      )}    
+    //                 </>
+    //             )
+                
+
+
+    //         case 'trikotaz':
+    //             const trikotazOdezda = fetchedShoesForWomen.filter(item => item.path === "trikotaz");
+    //             return (
+    //                 <>
+    //                     {trikotazOdezda.map((element) => {
+    //                             return (
+    //                                 <div
+    //                                     key={element.id}
+    //                                     className='provaider-catalogList'>
+    //                                     <ListItem {...element} key={element.id} />
+    //                                 </div>
+    //                             )
+    //                         }) 
+    //                     }
+    //                 </>
+    //             )
+    //         case 'obuv':
+    //             const obuvOdezda = fetchedShoesForWomen.filter(item => item.path === 'obuv');
+    //             return (
+    //                 <>
+    //                     {
+    //                      obuvOdezda.map((element) => {
+    //                             return (
+    //                                 <div
+    //                                     key={element.id}
+    //                                     className='provaider-catalogList'>
+    //                                     <ListItem {...element} key={element.id} />
+    //                                 </div>
+    //                             )
+    //                         })
+    //                     }
+    //                 </>
+    //             )
+
+    //         case 'jeans':
+    //             const jeansOdezda = fetchedShoesForWomen.filter(item => item.path === 'jeans');
+    //             return (
+    //                 <>
+    //                     {
+    //                      jeansOdezda.map((element) => {
+    //                             return (
+    //                                 <div
+    //                                     key={element.id}
+    //                                     className='provaider-catalogList'>
+    //                                     <ListItem {...element} key={element.id} />
+    //                                 </div>
+    //                             )
+    //                         })
+    //                     }
+    //                 </>
+    //             )
+    //     }
+    // }

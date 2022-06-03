@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 import './searchpage.scss';
 import sad from './sad.svg';
 
-import { fetchClothesForWoman, clothesSelector } from '../womanClothes/renderPage/ShoesSlice';
+import { fetchClothesForWoman, clothesSelector, allClothes } from '../womanClothes/renderPage/ClothesSlice';
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import ShoesItem from '../womanClothes/renderPage/ListItem';
@@ -12,13 +12,13 @@ const SearchPage = () => {
     const { state } = useLocation();
     const dispatch = useDispatch();
 
-    const fetchedShoesForWomen = useSelector(clothesSelector.selectAll);
-
+    // const fetchedShoesForWomen = useSelector(clothesSelector.selectAll);
+    const fetchedClothesForWomen = useSelector(allClothes);
     useEffect(() => {
         dispatch(fetchClothesForWoman());
     }, []);
 
-    const searchClothes = fetchedShoesForWomen.filter(item => {
+    const searchClothes = fetchedClothesForWomen.filter(item => {
         return item.name.toLowerCase().includes(state.toLowerCase())
     })
 

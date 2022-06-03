@@ -1,9 +1,9 @@
 import { lazy, Suspense } from 'react';
 
 import { HashRouter as Router, Route, Routes, location as useLocation } from 'react-router-dom';
-import ScrollToTop from './ScrollToTop.js';
+import ScrollToTop from '../helpers/ScrollToTop.js';
 import PageHeader from '../pageHeader/Page-Header.js';
-import Spinner from '../spinner/Spinner';
+import Spinner from '../helpers/spinner/Spinner';
 import './app.scss';
 import SendForm from '../pages/registration/sendForm/SendForm.js';
 import LoginForm from '../pages/login/Login-form.js';
@@ -12,12 +12,14 @@ import EditProfile from '../pages/EditProfile/EditProfile.js';
 import MainPage from '../pages/MainPage/MainPage.js';
 import SearchPage from '../pages/SearchPage/SearchPage.js';
 import CommonListPage from '../pages/womanClothes/renderPage/CommonListPage.js';
-import RenderListPage from '../pages/womanClothes/renderPage/RenderListPage.js';
+//import RenderListPage from '../pages/womanClothes/renderPage/RenderListPage.js';
+import RenderListPage from '../pages/womanClothes/renderPage/RenderItemPage.js';
 import SinglePageItem from '../pages/womanClothes/SinglePageItem.js';
 import WishListPage from '../pages/WishListPage/WishListPage.js';
 import BasketPage from '../pages/BasketPage/BasketPage.js';
-import PageFooter from '../pageFooter/PageFooter.js';
-
+import PageFooter from '../pages/pageFooter/PageFooter.js';
+import ListPage from '../pages/womanClothes/renderPage/CommonItemPage.js';
+// import CommonListPage from '../pages/womanClothes/renderPage/CommonListPage.js';
 
 const App = () => {
 
@@ -42,7 +44,7 @@ const App = () => {
                             <Route path="/basket" element={<BasketPage />}></Route>
                             <Route path="/catalog" element={<CommonListPage />} ></Route>
                             <Route path="/catalog/search" element={<SearchPage />} />
-                            <Route path="/catalog/womancollection" element={<CommonListPage />} />
+                            <Route path="/catalog/womancollection" element={<ListPage />} />
                             <Route path="/catalog/womancollection/:id" element={<SinglePageItem />} />
                             <Route path="/catalog/womancollection/verhnaa-odezda" element={<RenderListPage dataType='verhnaa-odezda' />} />
                             <Route path="/catalog/womancollection/verhnaa-odezda/:id" element={<SinglePageItem />} />

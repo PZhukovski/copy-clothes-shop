@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useCookies } from 'react-cookie';
-import { userSelector, fetchUser, upDateDataUser, } from '../profile/ProfileSlice';
-import { fetchClothesForWoman, clothesSelector } from '../womanClothes/renderPage/ShoesSlice'
+import { userSelector, fetchUser, upDateDataUser } from '../profile/ProfileSlice';
+import { fetchClothesForWoman, clothesSelector , allClothes } from '../womanClothes/renderPage/ClothesSlice'
 import axios from 'axios';
 import { JSON_API } from '../../JsonPort';
 import cancel from '../EditProfile/cancel.svg';
@@ -23,8 +23,9 @@ const WishListPage = () => {
     }, []);
 
     const fetchedUser = useSelector(userSelector.selectAll);
-    const clothesItems = useSelector(clothesSelector.selectAll);
-
+    // const clothesItems = useSelector(clothesSelector.selectAll);
+    const clothesItems = useSelector(allClothes);
+    
     const handleCloseBasketButton = (e) => {
         setfailedBasketModal(!failedBasketModal);
     }
@@ -61,6 +62,11 @@ const WishListPage = () => {
     }
 
     const handleBasket = (id) => {
+
+    const includeBasketArticle = fetchedUser.map(({ basket, wishlist, ...rest }) => {
+        return basket.filter(item => item.id === id);
+    });
+
         if (includeBasketArticle[0].length === 0) {
             const newUserData = fetchedUser.map(({ basket, ...rest }) => {
                 const fetchedItem = clothesItems.filter(item => item.id === id);
@@ -86,29 +92,20 @@ const WishListPage = () => {
             setfailedBasketModal(!failedBasketModal);
         }
     }
-
-    const includeBasketArticle = fetchedUser.map(({ basket, wishlist, ...rest }) => {
-        return basket.filter((unit) => {
-            const fetchedItem = wishlist.filter(item => item.id === unit.id);
-            if (fetchedItem.length > 0) {
-                return unit.article === fetchedItem[0].article;
-            }
-        })
-    });
+   
 
     return (
-        <div className="catalogPage" >
+        <div className="catalogPage-wishlist" >
             <h2 className='wishlist-title'>Вишлист</h2>
             <div className="catalogList" >
 
                 {fetchedUser.map(({ id, mail, password, phone, home_adress, data_birth, size_of_clothes, size_of_shoes, bonus, orders, wishlist, basket }) => {
 
                     return wishlist.map(({ id, modelId, article, price, name, color, pallete, size, img, path, description, proportions, composition }) => {
-
+                        
                         const renderPrice = price.toLocaleString();
 
                         return (
-
                             <div
                                 key={id}
                                 className='catalogCard-provaider'>

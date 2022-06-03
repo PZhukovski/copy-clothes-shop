@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import user from '../components/pages/profile/ProfileSlice';
-import  womancollection from '../components/pages/womanClothes/renderPage/ShoesSlice';
+import  womancollection from '../components/pages/womanClothes/renderPage/ClothesSlice';
 
 
 const stringMiddleware = () => (next) => (action) => {

@@ -1,14 +1,14 @@
-import { clothesSelector } from './ShoesSlice';
+import { allClothes } from './ClothesSlice';
 import { useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import './listitem.scss';
 
 
-const ShoesItem = ({ id, modelId, article, price, name, color, pallete, size, img, description, proportions, composition }) => {
+const ShoesItem = ({ id, modelId,  price, name, img, ...props }) => {
 
     let location = useLocation();
 
-    const fetchedShoesForWomen = useSelector(clothesSelector.selectAll);
+    const fetchedShoesForWomen = useSelector(allClothes);
     const colors = fetchedShoesForWomen.filter((item => item.modelId === modelId));
     const priceToString = price.toLocaleString();
 

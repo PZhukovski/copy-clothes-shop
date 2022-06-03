@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './commonlistpage.scss';
-import { fetchClothesForWoman, clothesSelector } from './ShoesSlice';
+import { fetchClothesForWoman,  allClothes } from './ClothesSlice';
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import ListItem from './ListItem';
@@ -8,6 +8,7 @@ import history from "history/browser";
 import arrowup from '../../../../assets/store/up.svg';
 import arrowdown from '../../../../assets/store/down.svg';
 import arrowleft from './arrow-left.svg';
+
 const SelectFilter = ({ activeFilter, setActiveFilter }) => {
 
     const [selectFilter, setSelectFilter] = useState(null);
@@ -85,12 +86,12 @@ const SelectFilter = ({ activeFilter, setActiveFilter }) => {
         </>
     )
 }
-const ShoesListPage = () => {
+const CommonListPage= () => {
     const [activeFilter, setActiveFilter] = useState('All');
     let historyLocation = history.location;
     const dispatch = useDispatch();
 
-    const fetchedShoesForWomen = useSelector(clothesSelector.selectAll);
+    const fetchedShoesForWomen = useSelector(allClothes);
 
     useEffect(() => {
         dispatch(fetchClothesForWoman());
@@ -180,7 +181,7 @@ const ShoesListPage = () => {
     )
 
 }
-export default ShoesListPage;
+export default CommonListPage;
 
 
 

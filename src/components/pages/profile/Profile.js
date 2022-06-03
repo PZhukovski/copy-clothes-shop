@@ -1,5 +1,5 @@
 import './profile.scss';
-import Accordion from './AccordionTabs1';
+import Accordion from '../../helpers/AccordionTabs1';
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie';

@@ -12,7 +12,6 @@ import * as Yup from 'yup';
 // import Profile from '../profile/Profile.js';
 
 
-
 const OpenModalFailed = () => {
 
     return (
@@ -21,7 +20,6 @@ const OpenModalFailed = () => {
         </div>
 
     )
-
 }
 const _transformPerson = (person) => {
     return {
@@ -29,7 +27,6 @@ const _transformPerson = (person) => {
         mail: person.mail,
         password: person.password
     }
-
 }
 
 const HandleLoginForm = () => {

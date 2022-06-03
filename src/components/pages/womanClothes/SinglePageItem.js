@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from "react";
 import { Link, useParams } from 'react-router-dom';
-import { fetchClothesForWoman, clothesSelector } from './renderPage/ShoesSlice';
+import { fetchClothesForWoman, allClothes , clothesSelector } from './renderPage/ClothesSlice';
 import { fetchUser, upDateDataUser, userSelector } from '../../../components/pages/profile/ProfileSlice';
 import { useCookies } from 'react-cookie';
 import axios from 'axios';
@@ -10,15 +10,13 @@ import arrowleft from './renderPage/arrow-left.svg';
 import favorite from '../../../assets/header-icons/favorite.svg';
 import favoritePush from '../../../assets/header-icons/favourite-push.svg'
 import cancel from '../EditProfile/cancel.svg';
-import Accordion from './AccordionTabs2';
+import Accordion from '../../helpers/AccordionTabs2';
 import './singlepageitem.scss';
 import history from "history/browser";
 
 
 const SinglePageItem = () => {
     const { id } = useParams();
-    // let location = useLocation();
-    // let navigate = useNavigate();
     let historyLocation = history.location;
     const [cookies, setCookie] = useCookies(['user']);
     const [active, setActive] = useState(null);
@@ -39,7 +37,6 @@ const SinglePageItem = () => {
     const clothesItems = useSelector(clothesSelector.selectAll);
     const items = useSelector(clothesSelector.selectAll);
     const fetchedItem = items.filter(item => item.id === id);
-
 
     const handleChange = (e) => {
         setActive(+e.currentTarget.dataset.index);

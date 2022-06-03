@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useCookies } from 'react-cookie';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { userSelector, fetchUser, upDateDataUser, } from '../profile/ProfileSlice';
-import { fetchClothesForWoman, clothesSelector } from '../womanClothes/renderPage/ShoesSlice'
+import { userSelector, fetchUser, upDateDataUser } from '../profile/ProfileSlice';
+import { fetchClothesForWoman, clothesSelector, allClothes } from '../womanClothes/renderPage/ClothesSlice'
 import BasketPageItem from '../BasketPageItem/BasketPageItem';
 
 import './basket.scss';
@@ -18,14 +18,12 @@ const BasketPage = () => {
     const [isActive, setIsActive] = useState(false);
     const [mySize, setMySize] = useState("Размер");
     const [count, setCount] = useState(1);
-    //console.log(cookies); 
     const [total, setTotal] = useState(0);
     const [openOrderForm , setOpenOrderForm] = useState(false);
     const { Mail, Password, Id } = cookies;
     const dispatch = useDispatch();
-    //const [items, setItems] = useState(basketClothes);
     const fetchedUser = useSelector(userSelector.selectAll);
-    const clothesItems = useSelector(clothesSelector.selectAll);
+    const clothesItems = useSelector(allClothes);
 
     useEffect(() => {
         dispatch(fetchClothesForWoman());
@@ -59,7 +57,7 @@ const BasketPage = () => {
         });
     }
     });
-    // console.log(sumTotal);
+   
 
     return (
         

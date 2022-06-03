@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk, createEntityAdapter , createSelector} from "@reduxjs/toolkit";
 import axios from 'axios';
 import { JSON_API } from '../../../JsonPort';
+import getFilter from "../../../helpers/getFilter";
 
 export const fetchClothesForWoman = createAsyncThunk(
     'womancollection/fetchClothesForWoman',
@@ -18,6 +19,8 @@ const womanCollectionAdapter = createEntityAdapter({
 
 const initialState = womanCollectionAdapter.getInitialState({
     userLoadingStatus: 'idle',
+    filterOfClothes: 'All',
+    filterOfShoes: 'All',
 });
 
 
@@ -25,6 +28,12 @@ const womanCollectionSlice = createSlice({
     name: 'womancollection',
     initialState,
     reducers: {
+        filterClothesChange: (state, action) => {
+            state.filterOfClothes = action.payload
+        },
+        filterShoesChange: (state, action) => {
+            state.filterOfShoes = action.payload
+        },
        
     },
     extraReducers: (builder) => {
@@ -45,11 +54,28 @@ const { actions, reducer} = womanCollectionSlice;
 export default reducer;
 
 export const clothesSelector = womanCollectionAdapter.getSelectors(state => state.womancollection);
+export const { selectAll: allClothes } = womanCollectionAdapter.getSelectors(state => state.womancollection)
 
+export const filterOfClothes = createSelector(
+    allClothes ,
+    state => state.womancollection.filterOfClothes,
+    (clothes, filter) => {
+        const result = getFilter(clothes, filter);
+        return result;
+    }
+
+)
+export const filterOfShoes = createSelector(
+    allClothes ,
+    state => state.womancollection.filterOfShoes,
+    (clothes, filter) => {
+        const result = getFilter(clothes, filter);
+        return result;
+    }
+
+)
 
 export const { 
-    userFetching,
-    userFetched,
-    userFetchingError,
-    addUser,
+    filterClothesChange,
+    filterShoesChange
 } = actions;

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector, useStore } from 'react-redux';
 import { useCookies } from 'react-cookie';
 import { userSelector, fetchUser, upDateDataUser, } from '../profile/ProfileSlice';
-import { fetchClothesForWoman, clothesSelector } from '../womanClothes/renderPage/ShoesSlice'
+import { fetchClothesForWoman, allClothes } from '../womanClothes/renderPage/ClothesSlice'
 import { JSON_API } from '../../JsonPort';
 import axios from 'axios';
 import basket_delete from '../../../assets/basket/basket_delete.svg';
@@ -13,13 +13,13 @@ import burger from './menu_burger.svg';
 
 
 
+
 const BasketPageItem = ({ id, modelId, article, price, name, color, pallete, size, img, description, proportions, composition }) => {
     const [cookies, setCookie] = useCookies(['user']);
     const [isActive, setIsActive] = useState(false);
     const [mySize, setMySize] = useState("Размер");
     const [count, setCount] = useState(1);
     const [activeDataProfile, setActiveDataProfile] = useState(false);
-    // const [sum, setSum] = useState('');
     const { Mail, Password, Id } = cookies;
     let location = useLocation();
     let navigate = useNavigate();
@@ -38,7 +38,7 @@ const BasketPageItem = ({ id, modelId, article, price, name, color, pallete, siz
     }
 
     const fetchedUser = useSelector(userSelector.selectAll);
-    const clothesItems = useSelector(clothesSelector.selectAll);
+    const clothesItems = useSelector(allClothes);
     const basketClothes = fetchedUser.map(({ basket, ...props }) => {
         return basket;
     });
