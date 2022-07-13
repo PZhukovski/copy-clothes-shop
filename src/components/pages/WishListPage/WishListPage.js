@@ -100,8 +100,8 @@ const WishListPage = () => {
             <div className="catalogList" >
 
                 {fetchedUser.map(({ id, mail, password, phone, home_adress, data_birth, size_of_clothes, size_of_shoes, bonus, orders, wishlist, basket }) => {
-
-                    return wishlist.map(({ id, modelId, article, price, name, color, pallete, size, img, path, description, proportions, composition }) => {
+                 return (wishlist.length > 0 ? 
+                     wishlist.map(({ id, modelId, article, price, name, color, pallete, size, img, path, description, proportions, composition }) => {
                         
                         const renderPrice = price.toLocaleString();
 
@@ -149,10 +149,9 @@ const WishListPage = () => {
                                     </div>
                                 </div>
                             </div>
-
                         )
                     })
-
+                  : <h3 className='wishlist-title'> Ваш wishlist пуст 😔</h3>)
                 })}
             </div>
             <OccupiedBasketFail />

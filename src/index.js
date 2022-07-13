@@ -9,13 +9,13 @@ import store from './store';
 import './styles/index.scss';
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <CookiesProvider>
       <Provider store={store}>
         <App />
       </Provider>
-    </CookiesProvider>
-  </React.StrictMode>,
+    </CookiesProvider>,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
