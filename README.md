@@ -1,2 +1,2 @@
-Try it on HEROKU: 
-https://dashboard.heroku.com/apps/clothes-shop-copy
+TRY IT ON HEROKU 🚀 :
+https://clothes-shop-copy.herokuapp.com/#/
