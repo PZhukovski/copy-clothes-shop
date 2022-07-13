@@ -2,20 +2,20 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useCookies } from 'react-cookie';
-import { userSelector, fetchUser } from '../pages/profile/ProfileSlice';
+import { userSelector, fetchUser } from '../../pages/profile/ProfileSlice';
 import { CSSTransition } from 'react-transition-group';
 
 import './page-header.scss';
-import logo from '../../assets/logo/12_storeez_logo.png';
-import search from '../../assets/header-icons/search.svg'
-import basket from '../../assets/header-icons/basket.svg';
-import favorite from '../../assets/header-icons/favorite.svg';
-import profile from '../../assets/header-icons/profile.svg';
+import logo from '../../../assets/logo/12_storeez_logo.png';
+import search from '../../../assets/header-icons/search.svg'
+import basket from '../../../assets/header-icons/basket.svg';
+import favorite from '../../../assets/header-icons/favorite.svg';
+import profile from '../../../assets/header-icons/profile.svg';
 import { v4 as v4 } from 'uuid';
 import items from './items.js'
 import arrow1 from './arrow1.svg';
 import menuburger from './menu_burger.svg';
-import cancel from '../pages/EditProfile/cancel.svg';
+import cancel from '../../pages/EditProfile/cancel.svg';
 
 
 
@@ -108,9 +108,9 @@ const PageHeader = () => {
                 <nav>
                     <div className="headers-links">
                         {items.map((n, i) => (
-                            <div className={`header-link-main tablinks ${i === active ? 'active' : ''}`}
+                            <div className={`header-link-main tablinks`}
                                 onMouseEnter={handleMouseEnter}
-                                onMouseLeave={handleMouseLeave}
+                                onClick={handleMouseLeave}
                                 data-index={i}
                                 key={i}
                             >
@@ -120,7 +120,7 @@ const PageHeader = () => {
                         ))}
                     </div>
 
-                    {items[active] && <TabContent {...items[active]} />}
+                    {/* {items[active] && <TabContent {...items[active]} />} */}
                 </nav>
 
                 <div className='logo'>

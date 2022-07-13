@@ -6,18 +6,86 @@
       "password": "Kiiiiii12!"
     },
     {
+      "wishlist": [
+        {
+          "category": "Обувь",
+          "path": "obuv",
+          "id": "113463",
+          "modelId": 4,
+          "article": "113463",
+          "price": 22980,
+          "name": "Полусапоги на массивной подошве",
+          "color": "Светло-бежевый",
+          "pallete": "#f2e2d2",
+          "size": [
+            {
+              "scale": "37",
+              "quantity": null
+            },
+            {
+              "scale": "38",
+              "quantity": null
+            },
+            {
+              "scale": "39",
+              "quantity": "5"
+            }
+          ],
+          "img": [
+            "/img-clothes/women/shoes/model4.beige/1.jpg",
+            "/img-clothes/women/shoes/model4.beige/2.jpg",
+            "/img-clothes/women/shoes/model4.beige/3.jpg"
+          ],
+          "description": "Полусапоги-трубы из мягкой кожи. Монохромные полусапоги на массивной подошве добавят актуальные штрихи в образ с узкими брюками и легинсами. Для модели выбрана пластичная и плотная кожа с фактурным рисунком, а за комфорт при ходьбе отвечает подкладка из гладкой кожи шевро. Деликатный материал требует бережного обращения. Обязательно обработайте обувь влагоотталкивающим средством после покупки. Сделано в Китае.",
+          "proportions": "Высота голенища в 37 размере: 19 см Обхват голенища в 37 размере: 33 см Высота подошвы в носочной части: 1,8 см Высота подошвы в пяточной части: 3,5 см",
+          "composition": "Натуральная кожа Подкладка: Натуральная кожа Подошва: Резина 100% Стелька: Натуральная кожа"
+        }
+      ],
+      "basket": [
+        {
+          "category": "Обувь",
+          "path": "obuv",
+          "id": "113463",
+          "modelId": 4,
+          "article": "113463",
+          "price": 22980,
+          "name": "Полусапоги на массивной подошве",
+          "color": "Светло-бежевый",
+          "pallete": "#f2e2d2",
+          "size": [
+            {
+              "scale": "37",
+              "quantity": null
+            },
+            {
+              "scale": "38",
+              "quantity": null
+            },
+            {
+              "scale": "39",
+              "quantity": "5"
+            }
+          ],
+          "img": [
+            "/img-clothes/women/shoes/model4.beige/1.jpg",
+            "/img-clothes/women/shoes/model4.beige/2.jpg",
+            "/img-clothes/women/shoes/model4.beige/3.jpg"
+          ],
+          "description": "Полусапоги-трубы из мягкой кожи. Монохромные полусапоги на массивной подошве добавят актуальные штрихи в образ с узкими брюками и легинсами. Для модели выбрана пластичная и плотная кожа с фактурным рисунком, а за комфорт при ходьбе отвечает подкладка из гладкой кожи шевро. Деликатный материал требует бережного обращения. Обязательно обработайте обувь влагоотталкивающим средством после покупки. Сделано в Китае.",
+          "proportions": "Высота голенища в 37 размере: 19 см Обхват голенища в 37 размере: 33 см Высота подошвы в носочной части: 1,8 см Высота подошвы в пяточной части: 3,5 см",
+          "composition": "Натуральная кожа Подкладка: Натуральная кожа Подошва: Резина 100% Стелька: Натуральная кожа"
+        }
+      ],
+      "phone": "9876543217",
+      "data_birth": "17.05.1981",
+      "size_of_clothes": "M",
+      "size_of_shoes": "37",
       "id": "34ff1ff7-b2e7-45af-9fdd-17a8254fb0db",
       "mail": "max12@mail.ru",
       "password": "Hello12!",
-      "phone": null,
       "home_adress": null,
-      "data_birth": null,
-      "size_of_clothes": null,
-      "size_of_shoes": null,
-      "bonus": null,
-      "orders": [],
-      "wishlist": [],
-      "basket": []
+      "bonus": "",
+      "orders": []
     },
     {
       "wishlist": [
@@ -232,146 +300,6 @@
       "home_adress": "",
       "bonus": "",
       "orders": []
-    },
-    {
-      "id": "168b633e-8ac0-4b3f-9cf3-776e3a81d253",
-      "mail": "hvjvj@mai.ru",
-      "password": "Polina16!",
-      "phone": null,
-      "home_adress": null,
-      "data_birth": null,
-      "size_of_clothes": null,
-      "size_of_shoes": null,
-      "bonus": null,
-      "orders": [],
-      "wishlist": [],
-      "basket": []
-    },
-    {
-      "id": "363532f2-6462-4953-a3cb-afa3efc524df",
-      "mail": "ppjj13@mail.ru",
-      "password": "Kiiiiii12!",
-      "phone": "",
-      "home_adress": "",
-      "data_birth": "",
-      "size_of_clothes": "",
-      "size_of_shoes": "",
-      "bonus": "",
-      "orders": [],
-      "wishlist": [],
-      "basket": []
-    },
-    {
-      "id": "547f8ad9-438f-43aa-9457-4498d2e42235",
-      "mail": "vhghgj12@mail.ru",
-      "password": "!12plokmp",
-      "phone": "",
-      "home_adress": "",
-      "data_birth": "",
-      "size_of_clothes": "",
-      "size_of_shoes": "",
-      "bonus": "",
-      "orders": [],
-      "wishlist": [],
-      "basket": []
-    },
-    {
-      "id": "a15286d3-38b4-4bee-a443-4bf2d899d351",
-      "mail": "ggcg@mail.ru",
-      "password": "!12plokmp",
-      "phone": "",
-      "home_adress": "",
-      "data_birth": "",
-      "size_of_clothes": "",
-      "size_of_shoes": "",
-      "bonus": "",
-      "orders": [],
-      "wishlist": [],
-      "basket": []
-    },
-    {
-      "id": "70d02ee7-2dd0-4292-8481-3d43d517d579",
-      "mail": "tot@mail.ru",
-      "password": "!12plokmp",
-      "phone": "",
-      "home_adress": "",
-      "data_birth": "",
-      "size_of_clothes": "",
-      "size_of_shoes": "",
-      "bonus": "",
-      "orders": [],
-      "wishlist": [],
-      "basket": []
-    },
-    {
-      "id": "f084c534-3715-4d69-9345-812488ab41de",
-      "mail": "1123@mail.ru",
-      "password": "Polina16!",
-      "phone": "",
-      "home_adress": "",
-      "data_birth": "",
-      "size_of_clothes": "",
-      "size_of_shoes": "",
-      "bonus": "",
-      "orders": [],
-      "wishlist": [],
-      "basket": []
-    },
-    {
-      "id": "dd9d5d4b-43d7-46af-b7a6-7fad501e09e3",
-      "mail": "hi@mail.ru",
-      "password": "!12plokmp",
-      "phone": "",
-      "home_adress": "",
-      "data_birth": "",
-      "size_of_clothes": "",
-      "size_of_shoes": "",
-      "bonus": "",
-      "orders": [],
-      "wishlist": [],
-      "basket": []
-    },
-    {
-      "id": "ba256f2c-6cd0-4b8d-9506-d6955ab6daf6",
-      "mail": "joj@mail.ru",
-      "password": "!12plokmp",
-      "phone": "",
-      "home_adress": "",
-      "data_birth": "",
-      "size_of_clothes": "",
-      "size_of_shoes": "",
-      "bonus": "",
-      "orders": [],
-      "wishlist": [],
-      "basket": []
-    },
-    {
-      "id": "41951cb6-90d6-409a-ad89-b05fd3d8abc5",
-      "mail": "567yu@mail.ru",
-      "password": "Polina16!",
-      "phone": "",
-      "home_adress": "",
-      "data_birth": "",
-      "size_of_clothes": "",
-      "size_of_shoes": "",
-      "bonus": "",
-      "orders": [],
-      "wishlist": [],
-      "basket": []
-    },
-    {
-      "id": "a2adce2f-b504-415a-bb8f-133dab22dd6f",
-      "mail": "213442@mail.ru",
-      "password": "ihkjbbhbhJ!3",
-      "phone": "",
-      "home_adress": "",
-      "data_birth": "",
-      "size_of_clothes": "",
-      "size_of_shoes": "",
-      "bonus": "",
-      "orders": [],
-      "wishlist": [],
-      "basket": []
     }
   ],
   "womancollection": [

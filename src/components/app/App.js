@@ -2,7 +2,8 @@ import { lazy, Suspense } from 'react';
 
 import { HashRouter as Router, Route, Routes, location as useLocation } from 'react-router-dom';
 import ScrollToTop from '../helpers/ScrollToTop.js';
-import PageHeader from '../pageHeader/Page-Header.js';
+// import PageHeader from '../pageHeader/Page-Header.js';
+import PageHeader from '../pages/pageHeader/Page-Header.js'
 import Spinner from '../helpers/spinner/Spinner';
 import './app.scss';
 import SendForm from '../pages/registration/sendForm/SendForm.js';
@@ -19,6 +20,8 @@ import WishListPage from '../pages/WishListPage/WishListPage.js';
 import BasketPage from '../pages/BasketPage/BasketPage.js';
 import PageFooter from '../pages/pageFooter/PageFooter.js';
 import ListPage from '../pages/womanClothes/renderPage/CommonItemPage.js';
+import ShopsPage from '../pages/ShopsPage/ShopsPage.js';
+import DeliveryPage from '../pages/buyers/DeliveryPage/DeliveryPage.js';
 // import CommonListPage from '../pages/womanClothes/renderPage/CommonListPage.js';
 
 const App = () => {
@@ -31,10 +34,10 @@ const App = () => {
                     {/* <Suspense fallback={<Spinner />}> */}
                         <Routes >
                             <Route exact path="/" element={<MainPage />}></Route>
-                            <Route path="/catalog/womancollection/new" element={<CommonListPage />}></Route>
+                            <Route path="/catalog/new" element={<CommonListPage />}></Route>
                             <Route path="/catalog/mencollection" element={<CommonListPage />}></Route>
-                            <Route path="/magazine" element={<CommonListPage />}></Route>
-                            <Route path="/buyers" element={<CommonListPage />}></Route>
+                            <Route path="/magazine" element={<ShopsPage />}></Route>
+                            <Route path="/buyers" element={<DeliveryPage/>}></Route>
                             <Route path="/main" element={<CommonListPage />}></Route>
                             <Route path="/registration" element={<SendForm />}></Route>
                             <Route path="/login" element={<LoginForm />}></Route>

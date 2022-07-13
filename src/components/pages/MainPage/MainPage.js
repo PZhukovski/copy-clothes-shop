@@ -87,17 +87,20 @@ const MainPage = () => {
 
     const dispatch = useDispatch();
     const fetchedClothesForWomen = useSelector(allClothes);
-   
+
     useEffect(() => {
         dispatch(fetchClothesForWoman());
     }, []);
+
+
+  
 
 
     const reduceArr = fetchedClothesForWomen.reduce((prev, cur) =>
         ({ ...prev, [cur.path]: (prev[cur.path] || []).concat(cur) }), {}
     );
     const groupArr = Object.values(reduceArr);
-  
+
     const RenderClothes = () => {
         return groupArr.map((group, i) => {
 
@@ -127,7 +130,7 @@ const MainPage = () => {
             )
         })
     };
-    
+
     return (
         <>
             <Slider /><div className="catalogPage-main">

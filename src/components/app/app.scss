@@ -17,9 +17,6 @@
 
   .page {
      position: relative;
-    // left: 15px;
-    // right: 15px;
-    // position: relative;
   }
   
   .page-enter {
@@ -43,13 +40,3 @@
     transform: scale(0.9);
     transition: opacity 1000ms, transform 1000ms;
   }
-// .content {
-//     display: grid;
-//     grid-template-columns: 560px 440px;
-//     max-width: 1040px;
-//     margin: 0 auto;
-//     padding-top: 50px;
-//     &__interactive {
-//         padding-left: 40px;
-//     }
-// }
